@@ -1,0 +1,31 @@
+RecentMessages = ReactMeteor.createClass
+  templateName: 'RecentMessages'
+  startMeteorSubscriptions: ->
+    #Meteor.subscribe 'players'
+    return
+  getMeteorState: ->
+    messages: Messages.find().fetch()
+
+  render: ->
+    return (
+      <div>
+        <h1>Recent Messages</h1>
+        <MessagesList messages={@state.messages} />
+      </div>
+    )
+
+MessagesList = React.createClass
+  render: ->
+    messages = @props.messages.map (message) ->
+      <MessageContent key={message._id} description={message.description} />
+
+    return (
+      <div className="messages-list">
+        <h4>List of messages</h4>
+        {messages}
+      </div>
+    )
+
+MessageContent = React.createClass
+  render: ->
+    <p>{@props.description}</p>
