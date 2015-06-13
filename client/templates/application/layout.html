@@ -1,0 +1,15 @@
+<template name="layout">
+  <div id="wrapper">
+    {{> mainNavigation}}
+    <!-- Page Content -->
+    <div id="page-wrapper">
+      <div class="container-fluid">
+        {{> flashMessages}}
+        {{> yield}}
+      </div>
+      <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+  </div>
+  <!-- /#wrapper -->
+</template>
