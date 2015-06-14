@@ -1,4 +1,4 @@
-Schemas.message = new SimpleSchema
+messageSchema = new SimpleSchema
   userId:
     type: String
     label: 'User'
@@ -39,4 +39,4 @@ Schemas.message = new SimpleSchema
     optional: false
     index: true
 
-Messages.attachSchema(Schemas.message)
+Messages.attachSchema(messageSchema)
