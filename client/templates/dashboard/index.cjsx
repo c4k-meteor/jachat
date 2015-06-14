@@ -1,5 +1,5 @@
-RecentMessages = ReactMeteor.createClass
-  templateName: 'RecentMessages'
+DashboardIndex = ReactMeteor.createClass
+  templateName: 'dashboardIndex'
   startMeteorSubscriptions: ->
     #Meteor.subscribe 'players'
     return
