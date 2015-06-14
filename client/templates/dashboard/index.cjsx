@@ -16,13 +16,13 @@ DashboardIndex = ReactMeteor.createClass
 
 MessagesList = React.createClass
   render: ->
-    messages = @props.messages.map (message) ->
+    messagesList = @props.messages.map (message) ->
       <MessageContent key={message._id} description={message.description} />
 
     return (
       <div className="messages-list">
         <h4>List of messages</h4>
-        {messages}
+        {messagesList}
       </div>
     )
 
