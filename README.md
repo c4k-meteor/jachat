@@ -16,6 +16,8 @@ You can add messages via browser console:
 
     Messages.insert({description: 'Right from the console'})
 
+### Step 1
+Add input text to add messages. Messages ordered by creation Date. Better presentation and styling.
 
 ## Packages
 meteor add reactjs:react
