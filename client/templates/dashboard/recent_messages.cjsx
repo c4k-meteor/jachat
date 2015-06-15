@@ -4,14 +4,14 @@ RecentMessages = ReactMeteor.createClass
     #Meteor.subscribe 'players'
     return
   getMeteorState: ->
-    messages: Messages.find().fetch()
+    messages: Messages.find({}, {sort: {createdAt: 1}}).fetch()
 
   render: ->
     return (
       <h1>Recent Messages</h1>
       <div className="chat-panel panel panel-default">
         <div className="panel-heading">
-          <i className="fa fa-comments fa-fw"></i> List of messages
+          <i className="fa fa-comments fa-fw"> </i> List of messages
         </div>
         <MessagesList messages={@state.messages} />
         <NewMessageForm />
