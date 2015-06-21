@@ -26,6 +26,8 @@ meteor add twbs:bootstrap
 
 meteor add accounts-base
 
+meteor add service-configuration
+
 meteor add accounts-facebook
 
 meteor add accounts-github
@@ -33,8 +35,6 @@ meteor add accounts-github
 meteor add accounts-google
 
 meteor add accounts-twitter
-
-meteor add service-configuration
 
 meteor add iron:router
 

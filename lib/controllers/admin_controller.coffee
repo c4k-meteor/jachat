@@ -7,3 +7,4 @@
         @render @loadingTemplate
       else
         Router.go('/')
+    @next

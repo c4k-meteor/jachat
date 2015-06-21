@@ -16,8 +16,8 @@ Router.route '/dashboard',
 
 goToDashboard = ->
   if Meteor.user()
-    Router.go('dashboard')
+    Router.go('dashboardIndex')
   @next()
 
-Router.onBeforeAction goToDashboard,
-  only: 'publicIndex'
+# Router.onBeforeAction goToDashboard,
+#   only: 'publicIndex'

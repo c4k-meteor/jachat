@@ -21,6 +21,7 @@ TopNavigationLeft = React.createClass
     </nav>
 
 TopNavigationRight = React.createClass
+
   render: ->
     <ul className="nav navbar-top-links navbar-right">
       <li className="dropdown">
@@ -36,9 +37,19 @@ TopNavigationRight = React.createClass
           </li>
         </ul>
       </li>
-      <li>
-        <ul className="dropdown-user">
-          Login here
-        </ul>
-      </li>
+      <LogoutLink />
     </ul>
+
+LogoutLink = React.createClass
+
+  logoutUser: (e) ->
+    e.preventDefault()
+    Meteor.logout (error) ->
+      if error
+        FlashMessages.sendError(error.message)
+      Router.go('/')
+
+  render: ->
+    <li>
+      <a href="" onClick={@logoutUser}><i className="fa fa-sign-out  fa-fw"></i> Logout {@props.currentUser}</a>
+    </li>

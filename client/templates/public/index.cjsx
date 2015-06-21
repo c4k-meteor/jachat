@@ -3,15 +3,26 @@ PublicIndex = ReactMeteor.createClass
 
   loginCallback: (error) ->
     if error
-      error.message
-    Router.go 'publicIndex'
+      console.log error.message
 
+  loginGithub: (e) ->
+    e.preventDefault()
+    Meteor.loginWithGithub({}, @loginCallback)
 
-  loginGithub: ->
-    Meteor.loginWithGithub(
-      {requestPermissions: ['user', 'public_repo']}, @loginCallback
-    )
+  logoutUser: (e) ->
+    e.preventDefault()
+    Meteor.logout (error) ->
+      if error
+        console.log error.message
+
+  currentUser: ->
+    Meteor.user().profile.name if Meteor.user()
 
   render: ->
-    <h1>Welcome to React</h1>
-    <button ref={@loginGithub}>Github</button>
+    <div className="jorge">
+      <h2>Welcome to React {@currentUser()}</h2>
+      <div className="chat-panel">
+        <a href="" onClick={@loginGithub}>Login with Github</a> |
+        <a href="" onClick={@logoutUser}>Logout with Github</a>
+      </div>
+    </div>
