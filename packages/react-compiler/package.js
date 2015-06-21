@@ -1,4 +1,4 @@
-var reactVersion = '0.13.0';
+var reactVersion = '0.13.3';
 
 
 Package.describe({
@@ -17,7 +17,7 @@ Package.registerBuildPlugin({
   ],
   npmDependencies: {
     'react-tools': reactVersion,
-    'coffee-react-transform': '2.4.1',
+    'coffee-react-transform': '3.2.0',
     'coffee-script': '1.9.1'
   }
 });

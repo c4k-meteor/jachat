@@ -24,7 +24,17 @@ meteor add reactjs:react
 
 meteor add twbs:bootstrap
 
-meteor add ian:accounts-ui-bootstrap-3
+meteor add accounts-base
+
+meteor add accounts-facebook
+
+meteor add accounts-github
+
+meteor add accounts-google
+
+meteor add accounts-twitter
+
+meteor add service-configuration
 
 meteor add iron:router
 

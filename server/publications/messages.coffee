@@ -1,3 +1,3 @@
-Messages.deny
-  remove: (userId, doc) ->
+Messages.allow
+  insert: (userId, doc) ->
     true

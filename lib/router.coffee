@@ -6,18 +6,18 @@ Router.configure
   trackPageView: true
 
 Router.route "/",
-  name: 'dashboardIndex'
+  name: 'publicIndex'
   controller: PublicController
 
-# Router.route '/dashboard',
-#   name: 'dashboard'
-#   controller: DashboardController
-#
-#
-# goToDashboard = ->
-#   if Meteor.user()
-#     Router.go('dashboard')
-#   @next()
-#
-# Router.onBeforeAction goToDashboard,
-#   only: 'homePage'
+Router.route '/dashboard',
+  name: 'dashboardIndex'
+  controller: AdminController
+
+
+goToDashboard = ->
+  if Meteor.user()
+    Router.go('dashboard')
+  @next()
+
+Router.onBeforeAction goToDashboard,
+  only: 'publicIndex'

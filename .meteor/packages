@@ -6,9 +6,7 @@
 
 meteor-platform
 autopublish
-insecure
 twbs:bootstrap
-ian:accounts-ui-bootstrap-3
 iron:router
 coffeescript
 sacha:spin
@@ -20,3 +18,9 @@ reactjs:react
 react-compiler
 aldeed:simple-schema
 aldeed:collection2
+accounts-base
+accounts-facebook
+accounts-github
+accounts-google
+accounts-twitter
+service-configuration
