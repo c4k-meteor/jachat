@@ -22,7 +22,7 @@ PublicIndex = ReactMeteor.createClass
     <div className="jorge">
       <h2>Welcome to React {@currentUser()}</h2>
       <div className="chat-panel">
-        <a href="" onClick={@loginGithub}>Login with Github</a> |
-        <a href="" onClick={@logoutUser}>Logout with Github</a>
+        <a href="/login">Login in</a> |
+        <a href="" onClick={@logoutUser}>Logout</a>
       </div>
     </div>

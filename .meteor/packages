@@ -19,8 +19,4 @@ react-compiler
 aldeed:simple-schema
 aldeed:collection2
 accounts-base
-accounts-facebook
-accounts-github
-accounts-google
-accounts-twitter
-service-configuration
+accounts-password

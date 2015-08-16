@@ -37,7 +37,7 @@ MessageContent = React.createClass
       <div className="chat-body clearfix">
         <div className="header pull-right">
           <small className="text-muted">
-             <i className="fa fa-clock-o fa-fw"> </i>{moment(@props.createdAt).fromNow()} -
+            <i className="fa fa-clock-o fa-fw"> </i>{moment(@props.createdAt).fromNow()} -
           </small>
           <strong className="primary-font"> Anonymous</strong>
         </div>

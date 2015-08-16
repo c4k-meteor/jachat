@@ -1,2 +1,2 @@
 @PublicController = RouteController.extend
-  layoutTemplate: "layout"
+  layoutTemplate: "publicLayout"

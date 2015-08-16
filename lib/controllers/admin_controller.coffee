@@ -1,10 +1,10 @@
 @AdminController = RouteController.extend
-  layoutTemplate: "layout"
+  layoutTemplate: "adminLayout"
 
-  onBeforeAction: ->
-    if !Meteor.user()
-      if Meteor.loggingIn()
-        @render @loadingTemplate
-      else
-        Router.go('/')
-    @next
+  # onBeforeAction: ->
+  #   if !Meteor.user()
+  #     if Meteor.loggingIn()
+  #       @render @loadingTemplate
+  #     else
+  #       Router.go('/')
+  #   @next
