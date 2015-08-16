@@ -19,6 +19,9 @@ You can add messages via browser console:
 ### Step 1
 Add input text to add messages. Messages ordered by creation Date. Better presentation and styling.
 
+### Step 2
+Account management changed to use react templates (login, create account and password recovery).
+
 ## Packages
 meteor add reactjs:react
 
